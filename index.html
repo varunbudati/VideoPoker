@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Poker</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Video Poker</h1>
+            <div id="game-type">Jacks or Better</div>
+            <div class="theme-toggle">
+                <button id="theme-toggle-btn">
+                    <span class="light-icon">☀️</span>
+                    <span class="dark-icon">🌙</span>
+                </button>
+            </div>
+        </header>
+
+        <div class="game-area">
+            <div class="info-panel">
+                <div class="score-container">
+                    <div class="score-label">Balance</div>
+                    <div id="score" class="score-value">1000</div>
+                </div>
+                <div class="bet-container">
+                    <div class="bet-label">Bet</div>
+                    <div id="current-bet" class="bet-value">10</div>
+                    <div class="bet-controls">
+                        <button id="decrease-bet">-</button>
+                        <button id="increase-bet">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cards-container">
+                <div class="card" id="card0">
+                    <div class="card-inner">
+                        <div class="card-back"></div>
+                        <div class="card-face">
+                            <div class="card-value"></div>
+                            <div class="card-suit"></div>
+                        </div>
+                    </div>
+                    <div class="hold-indicator">HOLD</div>
+                </div>
+                <div class="card" id="card1">
+                    <div class="card-inner">
+                        <div class="card-back"></div>
+                        <div class="card-face">
+                            <div class="card-value"></div>
+                            <div class="card-suit"></div>
+                        </div>
+                    </div>
+                    <div class="hold-indicator">HOLD</div>
+                </div>
+                <div class="card" id="card2">
+                    <div class="card-inner">
+                        <div class="card-back"></div>
+                        <div class="card-face">
+                            <div class="card-value"></div>
+                            <div class="card-suit"></div>
+                        </div>
+                    </div>
+                    <div class="hold-indicator">HOLD</div>
+                </div>
+                <div class="card" id="card3">
+                    <div class="card-inner">
+                        <div class="card-back"></div>
+                        <div class="card-face">
+                            <div class="card-value"></div>
+                            <div class="card-suit"></div>
+                        </div>
+                    </div>
+                    <div class="hold-indicator">HOLD</div>
+                </div>
+                <div class="card" id="card4">
+                    <div class="card-inner">
+                        <div class="card-back"></div>
+                        <div class="card-face">
+                            <div class="card-value"></div>
+                            <div class="card-suit"></div>
+                        </div>
+                    </div>
+                    <div class="hold-indicator">HOLD</div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button id="deal-btn" class="primary-button">DEAL</button>
+            </div>
+
+            <div id="hand-result" class="hand-result"></div>
+            
+            <div class="paytable">
+                <h3>Paytable (Per Bet Unit)</h3>
+                <table>
+                    <tr><td>Royal Flush</td><td>800</td></tr>
+                    <tr><td>Straight Flush</td><td>50</td></tr>
+                    <tr><td>Four of a Kind</td><td>25</td></tr>
+                    <tr><td>Full House</td><td>9</td></tr>
+                    <tr><td>Flush</td><td>6</td></tr>
+                    <tr><td>Straight</td><td>4</td></tr>
+                    <tr><td>Three of a Kind</td><td>3</td></tr>
+                    <tr><td>Two Pair</td><td>2</td></tr>
+                    <tr><td>Jacks or Better</td><td>1</td></tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="game-options">
+            <label>
+                Game Type:
+                <select id="game-select">
+                    <option value="jacks-or-better" selected>Jacks or Better</option>
+                    <option value="tens-or-better">Tens or Better</option>
+                    <option value="all-american">All American</option>
+                    <option value="jb95">9/5 Jacks or Better</option>
+                    <option value="jb86">8/6 Jacks or Better</option>
+                    <option value="jb85">8/5 Jacks or Better</option>
+                    <option value="jb75">7/5 Jacks or Better</option>
+                    <option value="jb65">6/5 Jacks or Better</option>
+                </select>
+            </label>
+        </div>
+        
+        <footer>
+            <div>
+                <p>Made by Varun Budati</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/videopoker-gui.js"></script>
+</body>
+</html>
